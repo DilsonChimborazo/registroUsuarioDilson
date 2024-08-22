@@ -8,4 +8,6 @@ class Persona(models.Model):
     email = models.EmailField(max_length=50)
     telefono = models.CharField(max_length=50)
     fecha_Creacion = models.DateField(auto_now=True)
-    estado = models.CharField(max_length=50, choices=ESTADO_CHOICE, default="Activo")
+    estado = models.CharField(max_length=50, choices=ESTADO_CHOICE, default="Activo") 
+    def __str__(self):
+        return self.nombre
